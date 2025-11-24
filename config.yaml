@@ -1,4 +1,4 @@
 v: 4.2
-routeConfig: "YQroute.txt"
+routeConfig: "ZJGroute.txt"
 libimobiledeviceDir: "libimobiledevice"
 imageDir: "DeveloperDiskImage"
