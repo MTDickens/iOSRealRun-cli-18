@@ -31,6 +31,7 @@
 3. 修改配置和路线文件 （见 [这里](https://github.com/iOSRealRun/iOSRealRun-cli/blob/main/README.md#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95) 的 4、5、7 步）
     - 注意，我这里默认是 YQ 的路线，不是教程中 HN 的。
         - 如果你也在 YQ，或者虽然不在 YQ 但是懒得改了，不改应该也是可以用的。
+        - 2025.11.24 更新：目前有 ZJG 东操的线路了，不过默认仍然是 YQ (`ZJGroute.txt`)
 4. 将设备连接到电脑，解锁，如果请求信任的提示框，请点击信任
 5. 打开终端（cmd 或 PowerShell），执行以下命令获取DDI
     ```shell
