@@ -22,12 +22,28 @@
 ### 步骤
 
 1. 克隆本项目到本地并进入项目目录
-2. 安装依赖（建议使用虚拟环境）  
+2. 安装依赖（建议使用虚拟环境）
+    
+    **方法一：使用 pip3（传统方法）**  
     ```shell
     pip3 install -r requirements.txt
     ```
     如果 `pip3` 无法安装，请使用 `pip` 替代  
-    如果提示没有需要的版本，请尝试不使用国内源  
+    如果提示没有需要的版本，请尝试不使用国内源
+    
+    **方法二：使用 uv（更快的安装方式）**  
+    首先安装 uv：
+    ```shell
+    # MacOS/Linux
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    
+    # Windows
+    powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+    然后使用 uv 安装依赖：
+    ```shell
+    uv pip install -r requirements.txt
+    ```  
 3. 修改配置和路线文件 （见 [这里](https://github.com/iOSRealRun/iOSRealRun-cli/blob/main/README.md#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95) 的 4、5、7 步）
     - 注意，我这里默认是 YQ 的路线，不是教程中 HN 的。
         - 如果你也在 YQ，或者虽然不在 YQ 但是懒得改了，不改应该也是可以用的。
