@@ -53,7 +53,11 @@
     ```shell
     pymobiledevice3 mounter auto-mount
     ```
-6. Windows **以管理员身份** 打开终端（cmd 或 PowerShell），先进入项目目录，然后执行以下命令 
+6. 运行程序
+    
+    **如果使用方法一（pip3）安装依赖：**
+    
+    Windows **以管理员身份** 打开终端（cmd 或 PowerShell），先进入项目目录，然后执行以下命令 
     ```shell
     python main.py
     ```
@@ -61,6 +65,18 @@
     ```shell
     sudo python3 main.py
     ```
+    
+    **如果使用方法二（uv）安装依赖：**
+    
+    Windows **以管理员身份** 打开终端（cmd 或 PowerShell），先进入项目目录，然后执行以下命令 
+    ```shell
+    uv run main.py
+    ```
+    MacOS 打开终端，先进入项目目录，然后执行以下命令  
+    ```shell
+    sudo uv run main.py
+    ```
+    
     > 需要 管理员 或 root 权限是因为需要创建 tun 设备  
 
 7. 按照提示操作，如果一直说没有设备连接，Windows请确保 iTunes 已安装（可能需要打开），重新运行程序，在第3步时请确保设备已连接，解锁并信任
