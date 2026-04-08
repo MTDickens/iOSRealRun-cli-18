@@ -41,10 +41,15 @@ async def main():
     init.init()
     logger.info("init done")
 
+    process = None
     logger.info("trying to start tunnel")
     original_sigint_handler = signal.signal(signal.SIGINT, signal.SIG_IGN)
     process, address, port = tunnel.tunnel()
     signal.signal(signal.SIGINT, original_sigint_handler)
+
+    if process is None or address is None or port is None:
+        return
+
     try:
         logger.debug(f"tunnel address: {address}, port: {port}")
 
@@ -66,10 +71,12 @@ async def main():
     except KeyboardInterrupt:
         logger.debug("get KeyboardInterrupt (outer)")
     finally:
-        logger.debug(f"Is process alive? {process.is_alive()}")
-        logger.debug("terminating tunnel process")
-        process.terminate()
-        logger.info("tunnel process terminated")
+        if process is not None:
+            logger.debug(f"Is process alive? {process.is_alive()}")
+            if process.is_alive():
+                logger.debug("terminating tunnel process")
+                process.terminate()
+                logger.info("tunnel process terminated")
         print("Bye")
     
 
